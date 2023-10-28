@@ -4,7 +4,7 @@ This Addon redesigns the TuCan webpage
 It is still Work in Progress so don't expect much of it
 ## Features
 - Replace TuCan logo with the FuCan logo
-- Enables dark mode 
+- Enables dark mode
 
 ## Planed features
 - Dropdown navigation
@@ -12,5 +12,9 @@ It is still Work in Progress so don't expect much of it
 - Overview of exams 
 
 ## Known bugs / TODO
-- [] navigation bar isn't responsive
-- [] there are no messages displayed on the message page 
+- navigation bar isn't responsive
+- there are no messages displayed on the message page
+- resources (like fontawesome) aren't loaded correctly...
+- make logo fitting to dark mode
+- english page is not working correctly
+- ~~If there are no appointments on "My TUCan" there will nothing be replaced~~

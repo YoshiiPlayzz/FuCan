@@ -3,28 +3,40 @@
   "description": "F*ck TuCan standart design and make it clean",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab","scripting"],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "action": {
     "default_icon": "Fucan.png"
-},
-"web_accessible_resources": [{
-    "matches": [
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
         "http://*.tucan.tu-darmstadt.de/*",
         "https://*.tucan.tu-darmstadt.de/*"
       ],
-    "resources": ["Fucan.png",     "style/fontawesome/*","scripts/jquery.js"]
-}],
-"content_scripts": [
+      "resources": [
+        "Fucan.png",
+        "style/fontawesome/*",
+        "scripts/jquery.js"
+      ]
+    }
+  ],
+  "content_scripts": [
     {
-      "js": ["scripts/content.js", "style/fontawesome/js/fontawesome.js", "scripts/jquery.js"],
-      "css":        [
+      "js": [
+        "scripts/content.js",
+        "style/fontawesome/js/fontawesome.js",
+        "scripts/jquery.js"
+      ],
+      "css": [
         "style/fontawesome/css/fontawesome.min.css"
-        ],
+      ],
       "matches": [
         "http://*.tucan.tu-darmstadt.de/*",
         "https://*.tucan.tu-darmstadt.de/*"
       ]
     }
   ]
-
-} 
+}

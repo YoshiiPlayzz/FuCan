@@ -88,18 +88,23 @@ for (item in navigation_list.getElementsByTagName("li")) {
 const header = document.getElementById("contentSpacer_IE").getElementsByTagName("h2")[1];
 
 const tableDiv = document.getElementsByClassName("tb rw-table")[0]
-const veranstaltungen = tableDiv.getElementsByTagName("table")[0]
 let aktivitaeten = []
-if (veranstaltungen.getElementsByTagName("tr").length > 1) {
-   for (i = 1; i < veranstaltungen.getElementsByTagName("tr").length; i++) {
-      let v = veranstaltungen.getElementsByTagName("tr")[i].cells[0].innerText
-      let name = veranstaltungen.getElementsByTagName("tr")[i].cells[1].innerText
-      let von_bis = "von " + veranstaltungen.getElementsByTagName("tr")[i].cells[2].innerText + " bis " + veranstaltungen.getElementsByTagName("tr")[i].cells[3].innerText
-      aktivitaeten.push(v +";"  + name + ";" + von_bis)
-   }
-}
 
-tableDiv.innerHTML =`<style>
+//Wenn table existiert
+if (tableDiv.getElementsByTagName("table").length > 0) {
+   const veranstaltungen = tableDiv.getElementsByTagName("table")[0]
+   if (veranstaltungen.getElementsByTagName("tr").length > 1) {
+      for (i = 1; i < veranstaltungen.getElementsByTagName("tr").length; i++) {
+         let v = veranstaltungen.getElementsByTagName("tr")[i].cells[0].innerText
+         let name = veranstaltungen.getElementsByTagName("tr")[i].cells[1].innerText
+         let von_bis = "von " + veranstaltungen.getElementsByTagName("tr")[i].cells[2].innerText + " bis " + veranstaltungen.getElementsByTagName("tr")[i].cells[3].innerText
+         aktivitaeten.push(v + ";" + name + ";" + von_bis)
+      }
+   }
+}else{
+   aktivitaeten.push("Es sind keine Aktivitäten für den Tag vorhanden!" + ";" + "" + ";" + "")
+}
+   tableDiv.innerHTML = `<style>
    .elements{
       border: 2px solid #212121;
       border-radius: 5px;
@@ -132,19 +137,22 @@ tableDiv.innerHTML =`<style>
    }
  
    </style><div class='parent'></div>`
-const grid = document.getElementsByClassName("parent")[0];
-const firstRow = document.createElement("div")
-firstRow.classList = "elements"
-firstRow.appendChild(header)
-grid.appendChild(firstRow);  
-for(i = 0; i < aktivitaeten.length; i++){
-   let sp = aktivitaeten[i].split(";");
-   let el = document.createElement("div")
-   el.classList = "elements"
-   el.innerHTML =  "<h3>" + sp[0] +"</h3><h4>" + sp[1] + "</h4><h5>" + sp[2] +"</h5>"
-   grid.appendChild(el)
+   const grid = document.getElementsByClassName("parent")[0];
+   const firstRow = document.createElement("div")
+   firstRow.classList = "elements"
+   firstRow.appendChild(header)
+   grid.appendChild(firstRow);
+   for (i = 0; i < aktivitaeten.length; i++) {
+      let sp = aktivitaeten[i].split(";");
+      let el = document.createElement("div")
+      el.classList = "elements"
+      el.innerHTML = "<h3>" + sp[0] + "</h3><h4>" + sp[1] + "</h4><h5>" + sp[2] + "</h5>"
+      grid.appendChild(el)
 
-}
+   }
+
+//Remove
 document.getElementById("pageContentTop").remove();
 document.getElementById("pageHeadBottom_3").remove();
+
 
