@@ -20,6 +20,7 @@ It is still Work in Progress so don't expect much of it
 - Overview of exams
 
 ## Known bugs / TODO
+- header is displayed over text
 - navigation bar isn't responsive
 - there are no messages displayed on the message page
 - resources (like fontawesome) aren't loaded correctly...
