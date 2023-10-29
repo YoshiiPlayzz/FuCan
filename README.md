@@ -1,6 +1,6 @@
 # FuCan - Chrome Addon to make TuCan look better 
 ## (F*ck TuCan standard design and make it clean)
-This Addon redesigns the TuCan webpage
+This Addon redesigns the TuCan webpage![Tucan webpage](github/view_29_10.png)
 It is still Work in Progress so don't expect much of it
 
 ## How to install
