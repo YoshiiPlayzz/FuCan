@@ -5,7 +5,7 @@ It is still Work in Progress so don't expect much of it
 
 ## How to install
 1. Download repository as .zip file ![Download zip-File](github/image.png)
-2. Open browser [extension settings](chrome://extensions)
+2. Open browser [extension settings](chrome://extensions) `chrome://extensions`
 3. Unzip file 
 4. Activate developer mode![Activate Developer Mode](github/developer_mode.png)
 5. Load unzipped folder![Load](github/load.png)
