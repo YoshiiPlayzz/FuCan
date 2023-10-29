@@ -2,6 +2,14 @@
 ## (F*ck TuCan standard design and make it clean)
 This Addon redesigns the TuCan webpage
 It is still Work in Progress so don't expect much of it
+
+## How to install
+1. Download repository as .zip file ![Download zip-File](github/image.png)
+2. Open browser [extension settings](chrome://extensions)
+3. Unzip file 
+4. Activate developer mode![Activate Developer Mode](github/developer_mode.png)
+5. Load unzipped folder![Load](github/load.png)
+
 ## Features
 - Replace TuCan logo with the FuCan logo
 - Enables dark mode
@@ -9,7 +17,7 @@ It is still Work in Progress so don't expect much of it
 ## Planed features
 - Dropdown navigation
 - Course finder
-- Overview of exams 
+- Overview of exams
 
 ## Known bugs / TODO
 - navigation bar isn't responsive
